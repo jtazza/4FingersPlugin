@@ -1,0 +1,43 @@
+
+/* Class = "UILabel"; text = "Take pictures of your 4 fingertips"; ObjectID = "14S-RN-fwJ"; */
+"14S-RN-fwJ.text" = "Presione 'Continuar' para iniciar la captura de fotos de sus dedos. Coloque su mano a la vista de la cámara trasera del teléfono, más o menos en la guía. Mantente firme y mantén tus dedos juntos.";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "75n-NF-MHp"; */
+"75n-NF-MHp.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Move hand parallel to phone.\\n\\nFill the guide for both pictures."; ObjectID = "NZL-od-mal"; */
+"NZL-od-mal.text" = "No logramos capturar correctamente";
+
+"xzT-Fs-2uS.text" = "Consejos: complete la guía para ambas imágenes. Mueva su mano paralela al teléfono. No cambies el ángulo de tu mano.";
+
+/* Class = "UILabel"; text = "Please Wait"; ObjectID = "Oeo-5F-CBc"; */
+"Oeo-5F-CBc.text" = "Por favor espera";
+
+/* Class = "UILabel"; text = "Processing..."; ObjectID = "Thq-XU-hLc"; */
+"Thq-XU-hLc.text" = "Procesando...";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Y6P-Ob-Ilv"; */
+"Y6P-Ob-Ilv.normalTitle" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "TAKE PICTURE"; ObjectID = "fhk-a7-JPi"; */
+"fhk-a7-JPi.normalTitle" = "CONTINUAR";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "gIE-pE-U14"; */
+"gIE-pE-U14.normalTitle" = "CANCELAR";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE"; ObjectID = "pqD-vV-xMf"; */
+"pqD-vV-xMf.normalTitle" = "CONTINUAR";
+
+/* Class = "UILabel"; text = "Progress"; ObjectID = "vPt-F5-QA0"; */
+"vPt-F5-QA0.text" = "Progreso";
+
+/* Class = "UILabel"; text = "We failed to authenticate you."; ObjectID = "KFo-PS-SDE"; */
+"KFo-PS-SDE.text" = "Escaneo fallido";
+
+"buM-d2-PTT.text" = "Presione 'Continuar' para iniciar la captura de fotos de su pulgar. Coloque su pulgar a la vista de la cámara trasera del teléfono, más o menos en la guía. Manténgase estable cuando esté verde.";
+
+"aGb-fl-NbK.text" = "Presione 'Continuar' para iniciar la captura de fotos de su dedo. Coloque su dedo en la vista de la cámara trasera del teléfono, más o menos en la guía. Manténgase estable cuando esté verde.";
+
+"Dav-KJ-dyg.text" = "Dirección";
+
+"FGy-YY-pol.text" = "REVER";

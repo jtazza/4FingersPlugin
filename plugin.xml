@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+id="cordova-plugin-entelfingerplugin" version="0.0.1">
+    <name>EntelFingerPlugin</name>
+
+    <description>Entel Finger Plugin</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+    </engines>
+
+    <js-module src="www/entelfingerplugin.js" name="entelFingerPlugin">
+        <clobbers target="window.plugins.entelFingerPlugin" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="EntelFingerPlugin">
+                <param name="android-package" value="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.EntelFingerPlugin"/>
+            </feature>
+        </config-file>
+
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+		  <uses-permission android:name="android.permission.INTERNET" />
+		  <uses-permission android:name="android.permission.CAMERA"/>
+		</config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+
+            <!-- TODO Add here Veridium SDK licence -->
+            <meta-data
+                android:name="com.veridiumid.sdk.LICENSE"
+                android:value="1Ycr3+DUJLkEIluerujxkYJA0WIJsQ88gxZpUd87P3Hg1rXfmKomi3DPbki+XoWGWOBwXHJEhvSuogAS7TzFAXsiZGV2aWNlRmluZ2VycHJpbnQiOiJFYTNkY2MrVkVsakJhL1JWb3E0NWI1U2x4ejdndC9FTHlvVXBvSjBPOWk0PSIsImxpY2Vuc2UiOiJYZXIvWWRRc0FMSkVDYndoUjA5ZE8zTWZkWDB2VWhtd1FWSkljWVliWm90dWVHQkhzMHk2Y2RLUk5ONnE2VExXbDZkTHZpVzFBbXZNa2RpbTE1bWxDSHNpZEhsd1pTSTZJbE5FU3lJc0ltNWhiV1VpT2lKVFJFc2lMQ0pzWVhOMFRXOWthV1pwWldRaU9qRTFPVFExTURFME9EQXNJbU52YlhCaGJubE9ZVzFsSWpvaVJXNTBaV3dnZG1saElFbHVjMjlzZFhScGIyNXpJaXdpWTI5dWRHRmpkRWx1Wm04aU9pSkZiblJsYkNCQmRYUnZVMkZzWlNCUWNtOXFaV04wSUMwZ05FWkZJQzBnZGpRZ0lDMGdZMjl0TG1WdWRHVnNMbTF2ZG1sc0lpd2lZMjl1ZEdGamRFVnRZV2xzSWpvaWJXbG5kV1ZzTG1obGNtNWhibVJsZWtCcGJuTnZiSFYwYVc5dWN5NXdaU0lzSW5OMVlreHBZMlZ1YzJsdVoxQjFZbXhwWTB0bGVTSTZJalJQUjFSdmNtUTRaREJ0TjNJclFVOWhhM2haTkM5TFVuTkhTWGRYVEdSTlJrOVZWVnBaUW14MFZVVTlJaXdpYzNSaGNuUkVZWFJsSWpveE5UZzNNREE1TmpBd0xDSmxlSEJwY21GMGFXOXVSR0YwWlNJNk1UWXlNRGsyTkRnd01Dd2laM0poWTJWRmJtUkVZWFJsSWpveE5qSXhNVE0zTmpBd0xDSjFjMmx1WjFOQlRVeFViMnRsYmlJNlptRnNjMlVzSW5WemFXNW5SbkpsWlZKQlJFbFZVeUk2Wm1Gc2MyVXNJblZ6YVc1blFXTjBhWFpsUkdseVpXTjBiM0o1SWpwbVlXeHpaU3dpWW1sdmJHbGlSbUZqWlVWNGNHOXlkRVZ1WVdKc1pXUWlPbVpoYkhObExDSnlkVzUwYVcxbFJXNTJhWEp2Ym0xbGJuUWlPbnNpYzJWeWRtVnlJanBtWVd4elpTd2laR1YyYVdObFZHbGxaQ0k2Wm1Gc2MyVjlMQ0psYm1admNtTmxJanA3SW5CaFkydGhaMlZPWVcxbGN5STZXeUpqYjIwdVpXNTBaV3d1Ylc5MmFXd2lYU3dpYzJWeWRtVnlRMlZ5ZEVoaGMyaGxjeUk2VzExOWZRPT0ifQ==" />
+            <meta-data
+                android:name="com.veridiumid.sdk.CONFIG"
+                android:value="com.veridiumid.sdk.core.ManifestConfiguration" />
+
+            <activity android:name="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.FourfingerActivity"
+            android:theme="@style/AppTheme">
+            </activity>
+
+            <activity android:name="com.outsystemsenterprise.entel.PEMiEntel.cordova.plugin.customFourFActivity"
+				android:theme="@style/AppTheme">
+				<meta-data
+                    android:name="com.veridiumid.sdk.component.config"
+                    android:value="uid=4F, optional=false, validator=com.veridiumid.sdk.fourf.FourFValidator" />
+            </activity>
+            
+            <!--activity android:name="bio.insolutions.veridium.entel.piloto.cordova.plugin.CustomFourFBiometricsActivity"
+            android:theme="@style/AppTheme">
+            <meta-data android:name="com.veridiumid.sdk.component.config"
+            android:value="uid=4F,optional=false,validator=com.veridiumid.sdk.fourf.FourFValidator"/></activity>
+            
+            <activity android:name="bio.insolutions.veridium.entel.piloto.cordova.plugin.ui.DefaultFourFBiometricsActivity"
+            android:theme="@style/AppTheme"></activity-->
+            
+		</config-file>
+
+		<resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml"/>
+		<resource-file src="src/android/res/values/colors.xml" target="res/values/colors.xml"/>
+		<resource-file src="src/android/res/layout/activity_fourfinger.xml" target="res/layout/activity_fourfinger.xml" />
+		
+		<framework src="src/android/dependencies.gradle" custom="true" type="gradleReference"/>
+
+
+        <source-file src="src/android/EntelFingerPlugin.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/FourfingerActivity.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+        <source-file src="src/android/customFourFActivity.java" target-dir="src/com/outsystemsenterprise/entel/PEMiEntel/cordova/plugin" />
+
+
+
+        <!-- local aar dependencies -->
+        <lib-file src="src/android/libs/veridium-analytics-release.aar"/>
+        <lib-file src="src/android/libs/veridium-core-release.aar"/>
+        <lib-file src="src/android/libs/veridium-fourf-agent-ui-release.aar"/>
+        <lib-file src="src/android/libs/veridium-fourf-authenticator-ui-release.aar"/>
+        <lib-file src="src/android/libs/veridium-fourf-camera-release.aar"/>
+        <lib-file src="src/android/libs/veridium-fourf-release.aar"/>
+        <lib-file src="src/android/libs/veridium-sdk-release.aar"/>
+        <lib-file src="src/android/libs/veridium-secure-data-release.aar"/>
+        <lib-file src="src/android/libs/veridium-support-release.aar"/>
+    </platform>
+
+    <platform name="ios">
+       <!--> <hook type="before_plugin_add" src="hooks/valid_architecture_hook.js" />-->
+        <hook type="after_plugin_add" src="hooks/addEmbedded.js" />
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="EntelFingerPlugin">
+				<param name="ios-package" value="EntelFingerPlugin" onload="true" />
+			</feature>
+		<!--<preference name="deployment-target" value="9.0" />
+			<preference name="pods_ios_min_version" value="9.0"/>
+			<preference name="pods_use_frameworks" value="true"/> -->
+		</config-file>
+
+
+        <header-file src="src/ios/FingerViewController.h" />
+		<source-file src="src/ios/FingerViewController.m" />
+		<header-file src="src/ios/EntelFingerPlugin.h" />
+		<source-file src="src/ios/EntelFingerPlugin.m" />
+
+        <framework src="src/ios/framework/Veridium4FBiometrics.framework" custom="true" />
+	    <framework src="src/ios/framework/VeridiumAnalytics.framework" custom="true" />
+        <framework src="src/ios/framework/VeridiumAuthenticatorUI.framework" custom="true"  />
+        <framework src="src/ios/framework/VeridiumCore.framework" custom="true"  />
+        <framework src="src/ios/framework/VeridiumDefault4FUI.framework" custom="true"  />
+  		
+	</platform>
+</plugin>

@@ -1,0 +1,43 @@
+
+/* Class = "UILabel"; text = "Take pictures of your fingertips."; ObjectID = "14S-RN-fwJ"; */
+"14S-RN-fwJ.text" = "Press 'Continue' to start photo capture of your fingers. Place your hand in view of the phone's rear camera, roughly in the guide. Stay steady and keep your fingers together.";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "75n-NF-MHp"; */
+"75n-NF-MHp.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Move hand parallel to phone.\\n\\nFill the guide for both pictures."; ObjectID = "NZL-od-mal"; */
+"NZL-od-mal.text" = "We failed to capture correctly";
+
+"xzT-Fs-2uS.text" = "Tips: Fill the guide for both pictures. Move your hand parallel to the phone. Do not change the angle of your hand.";
+
+/* Class = "UILabel"; text = "Please Wait"; ObjectID = "Oeo-5F-CBc"; */
+"Oeo-5F-CBc.text" = "Please Wait";
+
+/* Class = "UILabel"; text = "Processing..."; ObjectID = "Thq-XU-hLc"; */
+"Thq-XU-hLc.text" = "Processing...";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Y6P-Ob-Ilv"; */
+"Y6P-Ob-Ilv.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "TAKE PICTURE"; ObjectID = "fhk-a7-JPi"; */
+"fhk-a7-JPi.normalTitle" = "CONTINUE";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "gIE-pE-U14"; */
+"gIE-pE-U14.normalTitle" = "CANCEL";
+
+/* Class = "UIButton"; normalTitle = "CONTINUE"; ObjectID = "pqD-vV-xMf"; */
+"pqD-vV-xMf.normalTitle" = "CONTINUE";
+
+/* Class = "UILabel"; text = "Progress"; ObjectID = "vPt-F5-QA0"; */
+"vPt-F5-QA0.text" = "Progress";
+
+/* Class = "UILabel"; text = "We failed to authenticate you."; ObjectID = "KFo-PS-SDE"; */
+"KFo-PS-SDE.text" = "Scan failed";
+
+"buM-d2-PTT.text" = "Press 'Continue' to start photo capture of your thumb. Place your thumb in view of the phone's rear camera, roughly in the guide. Stay steady when green.";
+
+"aGb-fl-NbK.text" = "Press 'Continue' to start photo capture of your finger. Place your finger in view of the phone's rear camera, roughly in the guide. Stay steady when green.";
+
+"Dav-KJ-dyg.text" = "Guidance";
+
+"FGy-YY-pol.text" = "RETRY";

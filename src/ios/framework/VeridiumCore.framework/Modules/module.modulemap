@@ -1,0 +1,6 @@
+framework module VeridiumCore {
+  umbrella header "VeridiumCore.h"
+
+  export *
+  module * { export * }
+}

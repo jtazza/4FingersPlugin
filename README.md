@@ -1,1 +1,1 @@
-# 4FingersPlugin
+# EntelFingerPlugin

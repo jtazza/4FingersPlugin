@@ -1,0 +1,6 @@
+framework module VeridiumAuthenticatorUI {
+  umbrella header "VeridiumAuthenticatorUI.h"
+
+  export *
+  module * { export * }
+}
