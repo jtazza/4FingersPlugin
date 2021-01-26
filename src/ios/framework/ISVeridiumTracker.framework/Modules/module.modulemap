@@ -1,0 +1,11 @@
+framework module ISVeridiumTracker {
+  umbrella header "ISVeridiumTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ISVeridiumTracker.Swift {
+    header "ISVeridiumTracker-Swift.h"
+    requires objc
+}

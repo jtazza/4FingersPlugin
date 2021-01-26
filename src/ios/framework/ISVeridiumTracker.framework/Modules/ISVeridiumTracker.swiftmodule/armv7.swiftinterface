@@ -1,0 +1,139 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target armv7-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ISVeridiumTracker
+import Dispatch
+import Foundation
+@_exported import ISVeridiumTracker
+import MobileCoreServices
+import Swift
+import SystemConfiguration
+import UIKit.UIImage
+import UIKit
+extension UIDevice {
+  public static let modelName: Swift.String
+  public static let deviceName: Swift.String
+}
+public struct DeviceInformationRequest : Swift.Codable {
+  public var sessionId: Swift.String
+  public var imei: Swift.String
+  public var packageName: Swift.String
+  public var applicationName: Swift.String
+  public var licenseV: Swift.String
+  public var licenseF: Swift.String
+  public var osVersion: Swift.String
+  public var apiLevel: Swift.String
+  public var sdk: Swift.String
+  public var device: Swift.String
+  public var model: Swift.String
+  public var product: Swift.String
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeviceInformationResponse : Swift.Codable {
+  public var code: Swift.String
+  public var message: Swift.String
+  public var status: Swift.Int
+  public var data: ISVeridiumTracker.DeviceInformationData?
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeviceInformationData : Swift.Codable {
+  public var deviceInformation: ISVeridiumTracker.DeviceInformation
+  public var veridiumUsage: ISVeridiumTracker.VeridiumUsage?
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeviceInformation : Swift.Codable {
+  public var deviceInformationId: Swift.String
+  public var sessionId: Swift.String
+  public var imei: Swift.String
+  public var packageName: Swift.String
+  public var applicationName: Swift.String
+  public var licenseV: Swift.String
+  public var licenseF: Swift.String
+  public var osVersion: Swift.String
+  public var apiLevel: Swift.String
+  public var sdk: Swift.String
+  public var device: Swift.String
+  public var model: Swift.String
+  public var product: Swift.String
+  public var creationDate: Swift.String
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct VeridiumUsage : Swift.Codable {
+  public var veridiumUsageId: Swift.String
+  public var deviceInformationId: Swift.String
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct EventResponse : Swift.Codable {
+  public var code: Swift.String
+  public var message: Swift.String
+  public var status: Swift.Int
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers open class Endpoint {
+  @objc deinit
+}
+extension Endpoint : Swift.Equatable, Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: ISVeridiumTracker.Endpoint, rhs: ISVeridiumTracker.Endpoint) -> Swift.Bool
+  open var hashValue: Swift.Int {
+    get
+  }
+}
+public struct EventVeridium : Swift.Codable {
+  public var imei: Swift.String
+  public var packageName: Swift.String
+  public var veridiumUsageId: Swift.String
+  public var category: Swift.String
+  public var action: Swift.String
+  public var label: Swift.String
+  public var value: Swift.String
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers final public class VANetworkLoggerPlugin {
+  final public var configuration: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration
+  @objc deinit
+}
+extension VANetworkLoggerPlugin {
+  public struct Configuration {
+  }
+}
+extension VANetworkLoggerPlugin.Configuration {
+  public struct LogOptions : Swift.OptionSet {
+    public let rawValue: Swift.Int
+    public init(rawValue: Swift.Int)
+    public static let requestMethod: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let requestBody: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let requestHeaders: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let formatRequestAscURL: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let successResponseBody: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let errorResponseBody: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let `default`: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public static let verbose: ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public typealias Element = ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public typealias ArrayLiteralElement = ISVeridiumTracker.VANetworkLoggerPlugin.Configuration.LogOptions
+    public typealias RawValue = Swift.Int
+  }
+}
+extension VANetworkLoggerPlugin.Configuration {
+  public struct Formatter {
+    public static func defaultDataFormatter(_ data: Foundation.Data) -> Swift.String
+  }
+}
+@_hasMissingDesignatedInitializers public class VeridiumTracker {
+  public static var shared: ISVeridiumTracker.VeridiumTracker
+  public func trackEvent(name: Swift.String, category: Swift.String, action: Swift.String, label: Swift.String, value: Swift.String)
+  @objc deinit
+}

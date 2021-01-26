@@ -272,6 +272,15 @@ public class FourfingerActivity extends Activity  {
         @Override
         public void handleSuccess(Map<String, byte[][]> results) {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Exitoso");
+
+            // TRACKING IMPLEMENTATION
+            if (results != null && results.size() > 0) {
+                ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Exitoso");
+            } 
+            else {
+                ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Revisar");
+            }
+            
             // Handle exported templates here
 
             byte[] template = null;
@@ -289,11 +298,15 @@ public class FourfingerActivity extends Activity  {
 
                 }
             }
+
         }
 
         @Override
         public void handleFailure() {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Fallido");
+            // TRACKING IMPLEMENTATION
+            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Falla");
+
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Fallido");
             setResult(Activity.RESULT_CANCELED, i);
@@ -303,6 +316,8 @@ public class FourfingerActivity extends Activity  {
         @Override
         public void handleCancellation() {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Cancelado");
+            // TRACKING IMPLEMENTATION
+            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Cancelado");
 
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Cancelado");
@@ -313,6 +328,8 @@ public class FourfingerActivity extends Activity  {
         @Override
         public void handleError(String message) {
             ToastHelper.showMessage(FourfingerActivity.this, "Error: " + message, Toast.LENGTH_LONG);
+            // TRACKING IMPLEMENTATION
+            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Error");
 
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Erroneo");

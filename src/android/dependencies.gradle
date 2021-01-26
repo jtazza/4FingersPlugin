@@ -23,6 +23,8 @@ dependencies {
     implementation(name: 'veridium-fourf-release', ext: 'aar')
     implementation(name: 'veridium-fourf-camera-release', ext: 'aar')
     implementation(name: 'veridium-fourf-authenticator-ui-release', ext: 'aar')
+    //TRACKING IMPLEMENTATION
+    implementation(name: 'insolutionsveridiumsdk-release-v1.2', ext: 'aar')
 	
 }
 
