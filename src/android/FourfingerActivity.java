@@ -277,10 +277,10 @@ public class FourfingerActivity extends Activity  {
 
             // TRACKING IMPLEMENTATION
             if (results != null && results.size() > 0) {
-                ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Exitoso");
+                ISVeridiumTracker.trackEvent(getApplicationContext(), "Entel", "Veridium", "Captura", "Exitoso");
             } 
             else {
-                ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Revisar");
+                ISVeridiumTracker.trackEvent(getApplicationContext(), "Entel", "Veridium", "Captura", "Revisar");
             }
             
             // Handle exported templates here
@@ -307,7 +307,7 @@ public class FourfingerActivity extends Activity  {
         public void handleFailure() {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Fallido");
             // TRACKING IMPLEMENTATION
-            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Falla");
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "Entel", "Veridium", "Captura", "Falla");
 
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Fallido");
@@ -319,7 +319,7 @@ public class FourfingerActivity extends Activity  {
         public void handleCancellation() {
             ToastHelper.showMessage(FourfingerActivity.this, "Escaneo Cancelado");
             // TRACKING IMPLEMENTATION
-            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Cancelado");
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "Entel", "Veridium", "Captura", "Cancelado");
 
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Cancelado");
@@ -331,7 +331,7 @@ public class FourfingerActivity extends Activity  {
         public void handleError(String message) {
             ToastHelper.showMessage(FourfingerActivity.this, "Error: " + message, Toast.LENGTH_LONG);
             // TRACKING IMPLEMENTATION
-            ISVeridiumTracker.trackEvent(this, "Entel", "Veridium", "Captura", "Error");
+            ISVeridiumTracker.trackEvent(getApplicationContext(), "Entel", "Veridium", "Captura", "Error");
 
             Intent i = new Intent();
             i.putExtra("status", "Escaneo Erroneo");
