@@ -52,6 +52,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import insolutions.veridium.insolutionsveridiumsdk.ISVeridiumTracker;
+
 
 public class FourfingerActivity extends Activity  {
 
